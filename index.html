@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ca"> <!--<![endif]-->
+    
+
+<head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Muhammad Arif Fathurohman</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.html"></script>
+        <script src="ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>        
+    </head>
+    <body>
+        <ul>
+            <li>Hello Cloud!.</li>
+            <li>My Name is Muhammad Arif Fathurohman.</li>
+            <li>This is my first site deployment on azure.</li>
+            <li>Contact me at:</li>
+            <li>* Via Facebook (on.fb.me/1e0hHTb)</li>
+            <li>* Or by email (tukangcode@gmail.com)</li>
+            <li> </li>
+            <li>return true;</li>
+            <li>};</li>
+        </ul>
+        
+        <script>
+        (function(doc, win) {
+                if(!doc.querySelector) {
+                return alert('Your browser sucks. Sorry.');
+            }
+            
+            var list = doc.querySelector('ul'),
+                all = list.children,
+                i = all.length,
+                html = [];
+            
+                
+            while(i--) {
+                html[i] = all[i].innerHTML;
+                all[i].innerHTML = '';
+            }
+                
+            var animate = function(i) {
+                var me = all[i],
+                
+                    add = 'dollar',
+                    
+                    c = 0, d = 0;
+                    
+                me.className = add;
+                list.style.marginTop = '-' + (((i + 1) * 25) / 2) + 'px';
+                
+                var inty = setInterval(function() {
+                    me.innerHTML = html[i].substr(0, c) + '<span class="typing">|</span>';
+        
+                    c++;
+                    
+                    if(html[i].length < c) {
+                        clearInterval(inty);
+                        i++;
+                        
+                        
+                        if(all[i]) {
+                            setTimeout(function() {
+                                me.innerHTML = html[i - 1];
+                                animate(i);
+                            }, 400);
+                        }
+                    }
+                }, 75);
+            };
+            
+            animate(0);
+            
+            var t = [77, 69, 79, 87], d = [], r = function(m,a) {
+                return Math.floor(Math.random() * 100) + (m-a)+a;
+            };
+            var s = function() {
+                if(!window.atob) return false;
+                
+                var u = atob('aHR0cDovL3BsYWNla2l0dGVuLmNvbS8=') + r(2e2,4e2) + '/' + r(1e2,6e2);
+                var i = doc.createElement(atob('aW1n'));
+                i.src = u; i.setAttribute('style', 'position: absolute; left: ' + r(0,100) + '%; top: ' + r(0,100) + '%;');
+                doc.body.appendChild(i);
+            };
+            window.onkeyup = function(e) {
+                if(t.equals(d)) {
+                    return s();
+                }
+                
+                if(d.length==+!0 && d[0]!=t[0]) d=[];
+                e.which && d.push(e.which);
+            };
+        })(document, window);
+        
+            Array.prototype.equals = function(arr) {
+            if(this.length != arr.length) {
+                return false;
+            }
+            
+            for(var i = 0; i < arr.length; i++) {
+                if(this[i].compareArrays) {
+                    if(!this[i].compareArrays(arr[i])) {
+                        return false;
+                    }
+                }
+                if(this[i] != arr[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+                </script>
+    </body>
+</html>
